@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Student Registration Form</h1>
+            <p class="subtitle">Mini Project - Beginner to Intermediate Level</p>
+        </header>
+
+        <main>
+            <div class="project-info">
+                <div class="info-card">
+                    <h3>📋 Project Requirements</h3>
+                    <ul>
+                        <li>HTML Form Structure</li>
+                        <li>JavaScript Validation</li>
+                        <li>DOM Manipulation</li>
+                        <li>Live Output Display</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>⏱️ Duration</h3>
+                    <p>60 minutes</p>
+                    <h3>💯 Total Marks</h3>
+                    <p>25 marks</p>
+                </div>
+            </div>
+
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" placeholder="Enter your full name">
+                    <div class="error-message" id="nameError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" placeholder="example@domain.com">
+                    <div class="error-message" id="emailError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="Male">
+                            <span class="radio-custom"></span>
+                            Male
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="Female">
+                            <span class="radio-custom"></span>
+                            Female
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="Other">
+                            <span class="radio-custom"></span>
+                            Other
+                        </label>
+                    </div>
+                    <div class="error-message" id="genderError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Select Course *</label>
+                    <select id="course">
+                        <option value="">-- Choose a course --</option>
+                        <option value="JavaScript">JavaScript Fundamentals</option>
+                        <option value="HTML">HTML & CSS</option>
+                        <option value="Python">Python Programming</option>
+                        <option value="React">React Development</option>
+                        <option value="Node">Node.js Backend</option>
+                    </select>
+                    <div class="error-message" id="courseError"></div>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms">
+                        <span class="checkbox-custom"></span>
+                        I agree to the Terms & Conditions *
+                    </label>
+                    <div class="error-message" id="termsError"></div>
+                </div>
+
+                <button type="submit" class="submit-btn">Register Now</button>
+            </form>
+
+            <div id="outputSection" class="output-section hidden">
+                <div class="success-message">
+                    <h3>✅ Registration Successful!</h3>
+                    <p>Your registration has been completed successfully.</p>
+                </div>
+                <div class="output-card">
+                    <h4>📊 Registration Details:</h4>
+                    <div class="output-details">
+                        <div class="output-row">
+                            <span class="output-label">Name:</span>
+                            <span class="output-value" id="outputName"></span>
+                        </div>
+                        <div class="output-row">
+                            <span class="output-label">Email:</span>
+                            <span class="output-value" id="outputEmail"></span>
+                        </div>
+                        <div class="output-row">
+                            <span class="output-label">Gender:</span>
+                            <span class="output-value" id="outputGender"></span>
+                        </div>
+                        <div class="output-row">
+                            <span class="output-label">Course:</span>
+                            <span class="output-value" id="outputCourse"></span>
+                        </div>
+                        <div class="output-row">
+                            <span class="output-label">Registration Time:</span>
+                            <span class="output-value" id="outputTime"></span>
+                        </div>
+                    </div>
+                </div>
+                <button id="resetBtn" class="reset-btn">Register Another Student</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Mini Project | HTML, CSS, JavaScript | Total Marks: 25</p>
+            <div class="criteria">
+                <span>HTML Structure (5)</span>
+                <span>Validation (5)</span>
+                <span>DOM Manipulation (5)</span>
+                <span>Output Display (5)</span>
+                <span>Code Readability (5)</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="validation.js"></script>
+    <script src="dom_handling.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
